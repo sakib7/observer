@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <body>
-<a href="#" onclick="openTabs()" >Click</a>
+<a href="#" onclick="openTabs1()" >Page 1- 10</a>
+  <a href="#" onclick="openTabs2()" >Page 11- 20</a>
 <div id="container" onclick="multi()"></div>
   
 
@@ -40,7 +41,7 @@
     containerDiv.appendChild(brTag);
   }
 }
-function openTabs(){
+function openTabs1(){
   var date = new Date()
   var month = date.getMonth();
   month = month + 1
@@ -51,7 +52,28 @@ function openTabs(){
   if(day<=9){
     day = '0'+ day;
   }
-  for(i = 1; i<=20; i++){
+  for(i = 10; i>=1; i--){
+    window.open('http://epaper.jugantor.com'+
+                  '/'+date.getFullYear()+
+                  '/'+month+
+                  '/'+day+
+                  '/'+i+
+                  '/details/'+i+'.htm');
+  }
+        
+}
+function openTabs2(){
+  var date = new Date()
+  var month = date.getMonth();
+  month = month + 1
+  if(month<=9){
+    month = '0'+ month;
+  }
+  var day = date.getDate();
+  if(day<=9){
+    day = '0'+ day;
+  }
+  for(i = 20; i>=11; i--){
     window.open('http://epaper.jugantor.com'+
                   '/'+date.getFullYear()+
                   '/'+month+
