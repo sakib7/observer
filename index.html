@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-<a href="#" onclick="window.open('http://google.com');
-    window.open('http://yahoo.com');" >Click</a>
+<a href="#" onclick="openTabs()" >Click</a>
 <div id="container" onclick="multi()"></div>
   
 
@@ -36,10 +35,31 @@
                   '/details/'+i+'.htm'
     aTag.target = '_blank';
     aTag.innerText = "page "+i;
-
+    
     containerDiv.appendChild(aTag);
     containerDiv.appendChild(brTag);
   }
+}
+function openTabs(){
+  var date = new Date()
+  var month = date.getMonth();
+  month = month + 1
+  if(month<=9){
+    month = '0'+ month;
+  }
+  var day = date.getDate();
+  if(day<=9){
+    day = '0'+ day;
+  }
+  for(i = 1; i<=20; i++){
+    window.open('http://epaper.jugantor.com'+
+                  '/'+date.getFullYear()+
+                  '/'+month+
+                  '/'+day+
+                  '/'+i+
+                  '/details/'+i+'.htm');
+  }
+        
 }
   fun()
 </script>
