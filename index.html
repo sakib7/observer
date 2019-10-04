@@ -28,7 +28,7 @@
     var aTag = document.createElement('a')
     var brTag = document.createElement('br')
 
-    aTag.href = 'http://epaper.jugantor.com'+
+    aTag.href = domain+
                   '/'+date.getFullYear()+
                   '/'+month+
                   '/'+day+
@@ -53,7 +53,7 @@ function openTabs1(){
     day = '0'+ day;
   }
   for(i = 10; i>=1; i--){
-    window.open('http://epaper.jugantor.com'+
+    window.open(domain+
                   '/'+date.getFullYear()+
                   '/'+month+
                   '/'+day+
@@ -84,5 +84,7 @@ function openTabs2(){
         
 }
   var domain = 'http://epaper.jugantor.com'
+  fun(domain)
+  var domain = 'http://epaper.observer.com'
   fun(domain)
 </script>
