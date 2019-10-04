@@ -11,7 +11,7 @@
 
 <script>
 
-  function fun(){
+  function fun(domain){
   console.log("oncliked!!")
   var date = new Date()
   var month = date.getMonth();
@@ -74,7 +74,7 @@ function openTabs2(){
     day = '0'+ day;
   }
   for(i = 20; i>=11; i--){
-    window.open('http://epaper.jugantor.com'+
+    window.open(domain+
                   '/'+date.getFullYear()+
                   '/'+month+
                   '/'+day+
@@ -83,5 +83,6 @@ function openTabs2(){
   }
         
 }
-  fun()
+  var domain = 'http://epaper.jugantor.com'
+  fun(domain)
 </script>
